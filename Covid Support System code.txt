@@ -120,5 +120,3 @@ while Exit == False:
     # 6 Exit
     if choice == "6":
         Exit = True
-
-Note>> Lecturer marked it & said to list the 3 countries in #5 Report case it should be able to select the countries.
