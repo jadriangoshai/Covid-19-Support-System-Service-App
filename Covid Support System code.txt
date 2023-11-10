@@ -1,0 +1,124 @@
+Exit = False
+countries = ["SA","USA","China", "Brazil", "India", "Mexico", "Peru", "Australia", "Russia, “UK”, “Italy"]
+tot_cases = [27403, 1700000, 82995, 18243483, 30134445, 2493087, 2036449, 7155, 5346005, 4684572, 4255700]
+
+while Exit == False:
+    print("Welcome to the COVID 19 support service. Please select an option below: ")
+    print("1. Statistics")
+    print("2. Prevention")
+    print("3. Symptoms")
+    print("4. Treatment")
+    print("5. Report Case")	
+    print("6. Exit")
+
+    # Statistics
+    choice = input("Enter choice(1/2/3/4/5/6: ")
+    if choice == "1":
+        print(f"Currently in SA there are {tot_cases[0]} confirmed cases")
+        print(f"Currently in USA there are {tot_cases[1]} confirmed cases")
+        print(f"Currently in China there are {tot_cases[2]} confirmed cases")
+
+        choice1 = input("Would you like to see the Confirmed cases for a random country? y/n: ")
+        if choice1 == "y":
+            choice2 = int(input("To select a random country, type a number from 0 to 9: "))
+
+            print(countries[choice2])
+            if choice2 == 0:
+                print(tot_cases[0])
+
+            elif choice2 == 1:
+                print(tot_cases[1])
+
+            elif choice2 == 2:
+                print(tot_cases[2])
+
+            elif choice2 == 3:
+                print(tot_cases[3])
+
+            elif choice2 == 4:
+                print(tot_cases[4])
+
+            elif choice2 == 5:
+                print(tot_cases[5])
+
+            elif choice2 == 6:
+                print(tot_cases[6])
+
+            elif choice2 == 7:
+                print(tot_cases[7])
+
+            elif choice2 == 8:
+                print(tot_cases[8])
+
+            elif choice2 == 9:
+                print(countries[9])
+
+    # 2 Prevention
+    if choice == "2":
+        print("To prevent the spread of COVID-19: ")
+        print("Clean your hands often. Use soap and water, or an alcohol-based hand rub.")
+        print("Maintain a safe distance from anyone who is coughing or sneezing.")
+        print("Don't touch your eyes, nose or mouth.")
+        print("Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.")
+        print("Stay home if you feel unwell.")
+        print("If you have a fever, cough and difficulty breathing, seek medical attention. Call in advance.")
+        print("Follow the directions of your local health authority.")
+
+    # 3 Symptoms
+    if choice == "3":
+        print("Most common symptoms: ")
+        print("fever")
+        print("dry cough")
+        print("tiredness")
+
+        print("Less common symptoms: ")
+        print("aches and pains")
+        print("sore throat")
+        print("diarrhea")
+        print("conjunctivitus")
+        print("headache")
+        print("loss of taste or smell")
+        print("a rash on skin, or discolouration of fingers or toes")
+
+        print("Serious symptoms: ")
+        print("difficulty breathing or shortness of breath")
+        print("chest pain or pressure")
+        print("loss of speech or movement")
+
+    # 4 Treatment
+       if choice == "4":
+        print("If you feel sick you should rest, drink plenty of fluid, and eat nutritious food.")
+        print("Stay in a seperate room from other family members, and use a dedicated bathroom if possible.")
+        print("Clean and disinfect frequently touched surfaces.")
+
+    # 5 Report Case
+    if choice == "5":
+        print("Do you have any symptoms? y/n: ")
+        symptoms = input()
+        if symptoms == "y":
+            print("Is your temperature above 38.5 degrees? y/n")
+            temp = input()
+            if temp == "y":
+                print("In which country are you select option below: ")
+                print("1.SA")
+                print("2.USA")
+                print("3.China")
+                country = input()
+                if country == 1:
+                    tot_cases[0] = tot_cases[0] + 1
+
+                elif country == 2:
+                    tot_cases[1] = tot_cases[1] + 1
+
+                elif country == 3:
+                    tot_cases[2] = tot_cases[2] + 1
+            else:
+                print("You do not have COVID 19")
+        else:
+            print("You do not have COVID 19")
+
+    # 6 Exit
+    if choice == "6":
+        Exit = True
+
+Note>> Lecturer marked it & said to list the 3 countries in #5 Report case it should be able to select the countries.
